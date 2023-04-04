@@ -38,14 +38,13 @@ phases:
   build:
     commands:
       - ls 
-      - rm -r nhi 
       - git clone https://$GITUSERNAME:$GITTOKEN@github.com/HL7NZ/nes-ig     
       - cd nes-ig
       - git checkout $BRANCH
       - ls
       - echo getting dependencies
       #- mvn package -ntp
-      - mvn package
+      #- mvn package
       - echo building IG
       - ls -l
       - ls -l ./hfc_package
