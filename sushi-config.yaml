@@ -8,8 +8,8 @@
 
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 
-id: hl7.org.nz.fhir.ig.nhi
-canonical: http://hl7.org.nz/fhir/ig/nhi
+id: hl7.org.nz.fhir.ig.nes
+canonical: http://hl7.org.nz/fhir/ig/nes
 version: 1.0.0-SNAPSHOT
 name: NewZealandNESIG
 title: New Zealand NES IG
