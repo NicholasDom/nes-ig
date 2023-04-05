@@ -1,0 +1,21 @@
+{
+  "name": "hl7.org.nz.nes",
+  "version": "0.1.0",
+  "canonical": "http://hl7.org.nz/fhir/nes",
+  "url": "http://hl7.org.nz/fhir/StructureDefinition/NES",
+  "title": "New Zealand NHI IG",
+  "description": "The FHIR  API for NES",
+  "dependencies": {
+    "hl7.fhir.r4.core": "4.0.1"
+  },
+  "usage-stats-opt-out": true,
+  "language": "en",
+  "author": "Te Whatu Ora",
+  "maintainers": [
+    {
+      "name": "MoH",
+      "email": "mailto:integration@health.govt.nz"
+    }
+  ],
+  "license": "CC0-1.0"
+}
