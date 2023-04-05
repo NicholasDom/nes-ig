@@ -1,0 +1,58 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>nes-HL7NZ</groupId>
+	<artifactId>nes-HL7NZ</artifactId>
+	<version>${revision}</version>
+
+
+	<properties>
+		<revision>1.0.0</revision>
+		<fhir-common.version>1.1.12-SNAPSHOT</fhir-common.version>
+
+	</properties>
+	<dependencies>
+
+
+		<dependency>
+			<groupId>health.identity.fhir</groupId>
+			<artifactId>hip-fhir-common</artifactId>
+			<version>${fhir-common.version}</version>
+			<classifier>fhir-resources</classifier>
+			<type>zip</type>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>unpack-hpicm</id>
+						<phase>
+							generate-sources
+						</phase>
+						<goals>
+							<goal>unpack-dependencies</goal>
+						</goals>
+						<configuration>
+							<includeGroupIds>health.identity.fhir</includeGroupIds>
+							<includeArtifactIds>hip-fhir-common</includeArtifactIds>
+							<outputDirectory>
+								${project.basedir}/hfc_package
+							</outputDirectory>
+							<includes>**/package/package.tgz</includes>
+
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		
+		</plugins>
+	</build>
+</project>

@@ -37,7 +37,7 @@ echo getting common dependencies...
 common_url=$(yq '.dependencies."hl7.org.nz.fhir.ig.hip-core".uri' ./sushi-config.yaml)
 common_version=$(yq '.dependencies."hl7.org.nz.fhir.ig.hip-core".version' ./sushi-config.yaml)
 
-sudo mkdir ~/.fhir/packages//hl7.org.nz.fhir.ig.hip-core#$common_version
+sudo mkdir ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version
 ls -l ./hfc_package/hip-fhir-common*/package/package.tgz
 tar zxvf  ./hfc_package/hip-fhir-common*/package/package.tgz -C  ~/.fhir/packages/hl7.org.nz.fhir.ig.hip-core#$common_version
 ##fix the package url:
